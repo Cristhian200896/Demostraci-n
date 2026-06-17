@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es.PE">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurante</title>
+        <meta name="Un Restaurante" content="Muestra sobre comidas, direcciones y más">
+        <link rel="stylesheet" href="styleIndex.css">
+    </head>
+    <body>
+    
+        <nav class="navegacion">
+            <div class="logocontainer">
+                <a href="index.html">
+                <img src="imagen2.jpg" alt="Banner de restaurante" class="logoimagen">
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">☰</button>
+
+            <ul class="menuprincipal" id="menuPrincipal">
+                <li class="tienedesplegable">
+                    <details class="contenedordesplegable" name="menurestaurante">
+                    <summary class="botonpadre">CARTA 🠗</summary>
+                    <ul class="submenu">
+                        <li><a href="Carta.html" class="activo">CARTA</a></li>
+                        <li><a href="PollosALABrasa.html" class="activo">POLLOS A LA BRASA</a></li>
+                        <li><a href="Almuerzos.html" class="activo">ALMUERZOS</a></li>
+                    </ul>
+                    </details> 
+                </li>
+            
+                <li class="tienedesplegable">
+                    <details class="contenedordesplegable" name="menurestaurante">
+                    <summary class="botonpadre">BAR 🠗</summary>
+                    <ul class="submenu">
+                        <li><a href="CartaBar.html">CARTA BAR</a></li>
+                    </ul>
+                    </details> 
+                </li>
+            
+                <li class="tienedesplegable">
+                    <details class="contenedordesplegable" name="menurestaurante">
+                    <summary class="botonpadre">DELIVERY 🠗</summary>
+                    <ul class="submenu">
+                        <li><a href="Delivery.html">DELIVERY</a></li>
+                    </ul>
+                    </details> 
+                </li>
+
+                <li class="tienedesplegable">
+                    <a href="Reservas.html" class="botonpadre linkdirecto">RESERVAS</a>
+                </li>
+                
+                </ul>
+        </nav>
+        <section class="botondentroimagen">
+            <img src="imagen1.jpg" alt="Fondo Restaurante" class="fondoimagen">
+
+            <div class="contenedorboton">
+                <a href="Carta.html" class="btn botoncomidas" target="_blank">Carta Comida</a>
+                <a href="CartaBar.html" class="btn botonbar" target="_blank">Carta Bar</a>
+            </div>
+        </section>
+
+        <script>
+            // Escuchamos los clics en toda la pantalla
+            document.addEventListener('click', function (evento) {
+                // Buscamos todos los menús desplegables que tengan el atributo name
+                const menus = document.querySelectorAll('details[name="menurestaurante"]');
+            
+                menus.forEach(menu => {
+                    // Si el clic NO fue dentro del menú que está abierto, lo cerramos
+                    if (!menu.contains(evento.target)) {
+                        menu.removeAttribute('open');
+                    }
+                });
+            });
+        </script>
+        
+        <footer class="piepagina">
+            <div class="contenedorfooter">
+
+        <div class="bloquecolumnastextos">
+
+        <div class="columnaizquierda">
+            <h3 class="tituloseccion">ATENCIÓN EN LOCAL:</h3>
+            <p class="textomenu">Domingo a jueves: Ingreso de 12:00 p.m. a 11:00 p.m.</p>
+            <p class="textomenu">Viernes y sábado: Ingreso de 12:00 p.m. a 11:30 p.m.</p>
+            
+            <h3 class="tituloseccion mt2">PARA LLEVAR:</h3>
+            <p class="textomenu">Domingo a jueves de 12:00 p.m. a 11:30 p.m.</p>
+            <p class="textomenu">Viernes y sábado de 12:00 p.m. a 12:00 a.m.</p>
+            
+            <div class="textobuenastardes">
+                <p>Hola, buenas tardes a todos.</p>
+                <p>Es un gusto saludarles. Esperamos que disfruten de su visita.</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="columnaderecha">
+            <div class="enlaceslegales">
+                <a href="#">Libro de reclamaciones</a>
+                <a href="#">Política de privacidad</a>
+            </div>
+            
+            <h2 class="titulodireccion">Dirección</h2>
+            <p class="textodireccion">Av. Universitaria Norte 10481 – Urb. San Felipe – Comas</p>
+            <p class="textodireccion">Av. Micaela Bastidas Mz E2 Lt5 Urb. El Alamo – Comas</p>
+            
+            <p class="copyright">©2026 Gio's Restaurante. Todos los Derechos Reservados.</p>
+
+            <div class="textobuenasnoches">
+                <p>Hola, buenas noches. Esperamos que pasen una velada maravillosa y vuelvan pronto.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    </footer>
+    <!--boton flotante de wasap-->
+    <!--Reemplaza +51 955 035 726-->
+    <a href="https://api.whatsapp.com/send/?phone=51955035726&text=Hola,+me+gustaria+reservar+un+pedido" class="botonwasap" target="_blank">
+        <img src="https://static.vecteezy.com/system/resources/previews/016/716/480/non_2x/whatsapp-icon-free-png.png" alt="WhatsApp">
+        <span class="tooltipwasap">¿Enviar mi pedido por WhatsApp?</span>
+    </a>
+        <script>    
+        if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+            window.location.href = "index.html";
+        }
+    </script>
+    <script src="carta.js"></script>
+
+    <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const menuPrincipal = document.getElementById('menuPrincipal');
+
+    // Abre y cierra el menú principal al pulsar la hamburguesa ☰
+    menuToggle.addEventListener('click', (evento) => {
+    evento.stopPropagation(); // Evita que el clic se propague al documento
+    menuPrincipal.classList.toggle('activo');
+    });
+
+    // Cierra los desplegables <details> e internacionalmente el menú si haces clic fuera
+    document.addEventListener('click', function (evento) {
+    // Cerrar submenús clásicos <details>
+    const menus = document.querySelectorAll('details[name="menurestaurante"]');
+    menus.forEach(menu => {
+        if (!menu.contains(evento.target)) {
+                menu.removeAttribute('open');
+        }
+    });
+
+    // Cerrar menú hamburguesa si está abierto y haces clic fuera de la navegación
+    if (!menuPrincipal.contains(evento.target) && evento.target !== menuToggle) {
+        menuPrincipal.classList.remove('activo');
+    }
+    });
+    </script>
+
+    </body>
+    </html>

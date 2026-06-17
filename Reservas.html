@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es.PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="stylesReservas.css">
+</head>
+<body>
+
+    <nav class="navegacion">
+            <div class="logocontainer">
+                <a href="index.html">
+                <img src="imagen2.jpg" alt="Banner de restaurante" class="logoimagen">
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">☰</button>
+
+            <ul class="menuprincipal" id="menuPrincipal">
+                <li class="tienedesplegable">
+                    <details class="contenedordesplegable" name="menurestaurante">
+                    <summary class="botonpadre">CARTA 🠗</summary>
+                    <ul class="submenu">
+                        <li><a href="Carta.html">CARTA</a></li>
+                        <li><a href="PollosALABrasa.html">POLLOS A LA BRASA</a></li>
+                        <li><a href="Almuerzos.html">ALMUERZOS</a></li>
+                    </ul>
+                    </details> 
+                </li>
+            
+                <li class="tienedesplegable">
+                    <details class="contenedordesplegable" name="menurestaurante">
+                    <summary class="botonpadre">BAR 🠗</summary>
+                    <ul class="submenu">
+                        <li><a href="CartaBar.html">CARTA BAR</a></li>
+                    </ul>
+                    </details> 
+                </li>
+            
+                <li class="tienedesplegable">
+                    <details class="contenedordesplegable" name="menurestaurante">
+                    <summary class="botonpadre">DELIVERY 🠗</summary>
+                    <ul class="submenu">
+                        <li><a href="Delivery.html">DELIVERY</a></li>
+                    </ul>
+                    </details> 
+                </li>
+
+                <li class="tienedesplegable">
+                    <a href="Reservas.html" class="botonpadre linkdirecto">RESERVAS</a>
+                </li>
+                
+                </ul>
+        </nav>
+
+        <div class="banerdecentro">
+            <img src="imagen1.jpg" alt="Fondo Restaurante" class="fondoimagen">
+        </div>
+
+        <script>
+            // Escuchamos los clics en toda la pantalla
+            document.addEventListener('click', function (evento) {
+                // Buscamos todos los menús desplegables que tengan el atributo name
+                const menus = document.querySelectorAll('details[name="menurestaurante"]');
+            
+                menus.forEach(menu => {
+                    // Si el clic NO fue dentro del menú que está abierto, lo cerramos
+                    if (!menu.contains(evento.target)) {
+                        menu.removeAttribute('open');
+                    }
+                });
+            });
+        </script>
+
+        <div class="cartacontenedor">
+    
+    <ul class="restriccionesprincipales">
+        <li>Aceptamos reservas con mínimo de 2 horas de anticipación.</li>
+        <li class="destacadoitalic">Si el grupo es más de 15 personas con mínimo 8 horas de anticipación.</li>
+        <li>No aceptamos reservas para las 8:30 pm en adelante para los días viernes y sábados.</li>
+        <li>No aceptamos reservas para los días especiales (Día de la madre, San Valentín, entre otros).</li>
+    </ul>
+
+    <div class="condicionesdetalles">
+        <p class="introduccion">Estimado cliente, le agradecemos hacer su reserva con nosotros, a continuación le presentamos las restricciones y condiciones:</p>
+        
+        <ul class="listachica">
+            <li>Toda reserva tiene 15 minutos de tolerancia. Le agradecemos avisarnos si hay cambio en la hora reservada con 2 horas de anticipación. En el caso que el cliente no asista a la hora pactada se dará por anulada la reserva.</li>
+            <li>Las reservas aplican a las mesas solicitadas más no al espacio o ambiente. En caso que deseen reservar un espacio dentro de nuestras instalaciones para realizar algún evento de carácter «EXCLUSIVO» deberán pagar un importe adicional por el alquiler del espacio del ambiente ocupado.</li>
+        </ul>
+
+    <div class="condicionesdetalles">
+        <p class="introduccion">Prohibiciones: </p>
+        <ul class="listachica">
+            <li>Está prohibido el ingreso con animales.</li>
+            <li>Está prohibido realizar espectáculos musicales.</li>
+            <li>Está prohibido el ingreso con alimentos( Comidas, bebidas alcohólicas o no alcoholicas). Costo del corcho libre S/ 20.00 por botella de vino.</li>
+            <li>Está prohibido el uso de material pirotécnico y /o espuma o serpentina en spray, por ser parte de las medidas de seguridad y defensa civil.</li>
+        </ul>
+
+        <div class="condicionesdetalles">
+        <p class="introduccion">Para reservas a partir de 20 personas a más: </p>
+        <ul class="listachica">
+            <li>El cliente deberá pagar el 50% del importe hasta 24 horas antes de la reserva, y el saldo el mismo día de la reserva .</li>
+            <li>La penalidad por anulación de la reserva es equivalente al 50% del importe adelantado.</li>
+            <li>Los pagos pueden realizarse en nuestro local dentro del horario de atención; o con depósito en cuenta corriente.</li>
+        </ul>
+        </div>
+    </div>
+</div>
+
+    <section class="seccionhorario">
+
+    <div class="contenedormapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7807.481134826613!2d-77.0687431!3d-11.9231344!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d1b13f1d1727%3A0xa23b903b109dc54!2sHotel%20Hacienda%20Lima%20Norte!5e0!3m2!1ses!2spe!4v1780451699973!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="contenedorinfo">
+        <div class="bloquesuperior">
+        <h2 class="tituloprincipal">HORARIO DE ATENCIÓN</h2>
+
+        <div class="bloqueinfo">
+            <h3>HORARIO DE OFICINA</h3>
+            <p>Todos los dias: de 12:30 pm 8:00 pm</p>
+        </div>
+    </div>
+
+    <div class="bloquecontacto">
+        <div class="reservas">
+            <h3>RESERVAS AL:</h3>
+            <p>903 903 940</p>
+            <p>903 239 239</p>
+        </div>
+    
+        <div class="redes">
+            <h3>SÍGUENOS</h3>
+            <div class="iconos">
+            <a href="https://www.facebook.com" class="iconosaplicaciones">
+                <img src="facebook.jpg" alt="" width="70px" height="70px">
+            </a>
+            <a href="https://www.instagram.com" class="iconosaplicaciones">
+                <img src="instagram.jpg" alt="" width="70px" height="70px">
+            </a>
+            <a href="https://www.twitter.com" class="iconosaplicaciones">
+                <img src="twitter.jpg" alt="" width="70px" height="70px">
+            </a>
+            </div>  
+        </div>
+    </div>
+</div>
+</section>
+    <footer class="piepagina">
+
+    <div class="bloquecolumnastextos">
+
+        <div class="columnaizquierda">
+            <h3 class="tituloseccion">ATENCIÓN EN LOCAL:</h3>
+            <p class="textomenu">Domingo a jueves: Ingreso de 12:00 p.m. a 11:00 p.m.</p>
+            <p class="textomenu">Viernes y sábado: Ingreso de 12:00 p.m. a 11:30 p.m.</p>
+            
+            <h3 class="tituloseccion mt2">PARA LLEVAR:</h3>
+            <p class="textomenu">Domingo a jueves de 12:00 p.m. a 11:30 p.m.</p>
+            <p class="textomenu">Viernes y sábado de 12:00 p.m. a 12:00 a.m.</p>
+            
+            <div class="textobuenastardes">
+                <p>Hola, buenas tardes a todos.</p>
+                <p>Es un gusto saludarles. Esperamos que disfruten de su visita.</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="columnaderecha">
+            <div class="enlaceslegales">
+                <a href="#">Libro de reclamaciones</a>
+                <a href="#">Política de privacidad</a>
+            </div>
+            
+            <h2 class="titulodireccion">Dirección</h2>
+            <p class="textodireccion">Av. Universitaria Norte 10481 – Urb. San Felipe – Comas</p>
+            <p class="textodireccion">Av. Micaela Bastidas Mz E2 Lt5 Urb. El Alamo – Comas</p>
+            
+            <p class="copyright">©2026 Gio's Restaurante. Todos los Derechos Reservados.</p>
+
+            <div class="textobuenasnoches">
+                <p>Hola, buenas noches. Esperamos que pasen una velada maravillosa y vuelvan pronto.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    </footer>
+
+    <!--boton flotante de wasap-->
+    <!--Reemplaza +51 955 035 726-->
+    <a href="https://api.whatsapp.com/send/?phone=51955035726&text=Hola,+me+gustaria+reservar+un+pedido" class="botonwasap" target="_blank">
+        <img src="https://static.vecteezy.com/system/resources/previews/016/716/480/non_2x/whatsapp-icon-free-png.png" alt="WhatsApp">
+        <span class="tooltipwasap">¿Enviar mi pedido por WhatsApp?</span>
+    </a>
+
+    <script>
+        if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+            window.location.href = "index.html";
+        }
+    </script>
+
+    </script>
+    <script src="carta.js"></script>
+
+    <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const menuPrincipal = document.getElementById('menuPrincipal');
+
+    // Abre y cierra el menú principal al pulsar la hamburguesa ☰
+    menuToggle.addEventListener('click', (evento) => {
+    evento.stopPropagation(); // Evita que el clic se propague al documento
+    menuPrincipal.classList.toggle('activo');
+    });
+
+    // Cierra los desplegables <details> e internacionalmente el menú si haces clic fuera
+    document.addEventListener('click', function (evento) {
+    // Cerrar submenús clásicos <details>
+    const menus = document.querySelectorAll('details[name="menurestaurante"]');
+    menus.forEach(menu => {
+        if (!menu.contains(evento.target)) {
+                menu.removeAttribute('open');
+        }
+    });
+
+    // Cerrar menú hamburguesa si está abierto y haces clic fuera de la navegación
+    if (!menuPrincipal.contains(evento.target) && evento.target !== menuToggle) {
+        menuPrincipal.classList.remove('activo');
+    }
+    });
+    </script>
+
+</body>
+</html>
